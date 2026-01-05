@@ -1,0 +1,63 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Ajusta la altura del body al 100% del viewport para un centrado vertical efectivo / No me funciona centrado sin esto*/
+  min-height: 100vh; 
+  background-image: url("imagenes/cesped-artificial.jpg");
+  background-size: cover;
+  
+}
+.card1{
+  width: 600px;
+  transition: 0.3s;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}
+.container {
+  padding: 2px 16px;
+}
+.card1 img{
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+}
+.card1:hover{
+  transform: scale(1.1)
+}
+/*---------------------------filiales---------------*/
+.card2{
+  width: 600px;
+  transition: 0.3s;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card2 img{
+  display: flex;
+  justify-content: center;
+  /*para que este cortada*/
+  object-fit: cover;
+  /*enseña parte superior imagen*/
+  object-position: top;
+  width: 100%;
+  height: 280px;
+}
+.card2:hover{
+  transform: scale(1.1)
+}
+/*--------------------------multimedia----------------*/
+.multimedia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

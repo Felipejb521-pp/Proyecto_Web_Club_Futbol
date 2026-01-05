@@ -1,0 +1,192 @@
+* {/*inicializar*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header header header '
+    'menu menu menu'
+    'main main main'
+    'footer footer footer'  ;
+    /*main crece, footer se ajusta */
+    grid-template-rows: auto auto 1fr 200px; 
+    background-color: white;
+    
+}
+/*-------------------cabecera---------------*/
+.grid-item1{
+   grid-area: header;
+   display: flex;
+    background-color: white;
+
+}
+.grid-item1 h1{
+    text-shadow: 2px 1px;
+    margin: 0;
+    font-size: 80px;
+    color: #FFD700;
+}
+.grid-item1 img{
+    margin-left: 30%;
+    width: 90px;
+    height: 90px;
+    
+}
+
+/*----------------------main-----------------*/
+.grid-item3{
+    grid-area: main;
+    background-color: black; 
+    
+}
+.grid-item3 h2{
+    display: flex;
+    color: white;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+.contenido-texto{
+    display: flex;
+    /*p en columnas en main*/
+    flex-direction: column;
+    margin-left: 20px;
+    color: white; 
+    font-size: 20px;
+}
+.grid-item3 .wrapper {
+    display: grid;
+    /*cfreo dos columnas para ordenar texto e imagenes*/
+    grid-template-columns: 60% 40%;
+    gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+.grid-item3 .wrapper p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.grid-item3 .wrapper .imagen-main{/*imagen campo futbol*/
+    display: flex;
+    width: 400px;
+    height: 250px;
+    object-fit: contain;
+    margin-right: 70px;
+
+}
+
+.grid-item3 img:hover{/*los separo para transicion suave*/
+    transform: scale(1.1);
+}
+.grid-item3 img{
+    transition: transform 0.4s;
+}
+/*-----------*/
+
+.merchandising-section {/* Merchandising */
+    text-align: center;
+    margin: 80px 20px;
+    color: white;
+}
+
+.merchandising-section h2 {
+    font-size: 36px;
+    
+}
+
+/* Contenedor de productos en horizontal */
+.merch-items {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* espacio entre las imágenes */
+    flex-wrap: wrap; /* se adapta a pantallas pequeñas */
+}
+
+.merch-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.merch-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.merch-item img:hover {
+    transform: scale(1.1);
+}
+
+.merch-item p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/*--------------------menu---------------------*/
+.grid-item2{
+    grid-area: menu;
+    background-color: #FFD700;
+    /*pego el menu arriba del todo*/
+    position: sticky;
+    top: 0;
+    /*para que el main no se sobreponga al menu*/
+    z-index: 10;
+}
+.grid-item2 a{
+    color: black;
+    justify-content: center;
+    /*quito el subrayado*/
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.grid-item2 ul{
+    /*quito los puntos de las listas*/
+    list-style: none;
+    /*necesito poner horizontal links*/
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*-------------------footer---------------------*/
+.grid-item4{
+    grid-area: footer;
+    justify-content: center;
+    background-color: white;
+    display: flex; /* necesario para centrar verticalmente el wrapper */
+    align-items: center;
+    padding: 10px 50px; /* espacio interno */
+   
+}
+.grid-item4 .wrapper{
+    display: flex;
+    /* centro verticalmente */
+    align-items: center;  
+    justify-content: center;
+    /*espacio entre imagen y lista */ 
+    gap: 90px;             
+    width: 100%;  
+}
+.grid-item4 .wrapper ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    
+}
+.grid-item4 img{
+    width: 50px;
+    height: 50px;
+   
+}

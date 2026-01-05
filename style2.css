@@ -1,0 +1,57 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Ajusta la altura del body al 100% del viewport para un centrado vertical efectivo / No me funciona centrado sin esto*/
+  min-height: 100vh; 
+  background-size: cover;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+ 
+  border-radius: 10px;
+  transition: all 0.3s ;
+  width: 400px;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+
+ 
+}
+
+.input::placeholder {
+  color: black;
+}
+
+.input:hover{
+  transform: scale(1.05) ;
+  
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b8df2;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+ 
+}
+
+button:hover {
+  background-color: #0077be;
+  font-size: 17px;
+  transform: scale(1.05) ;
+}
